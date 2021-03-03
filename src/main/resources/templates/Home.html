@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Internationalization</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+  </head>
+  <body>
+  	<div class="container">
+		<div class="col-12">
+		    <h4 class="display-4 text-center" th:text="#{page.title}"></h4>
+		    <p class="lead text-muted text-center" th:text="#{page.description}"></p>
+		</div>
+		<div class="col-2 offset-5">
+		  <a th:href="@{/home?language=pt}" class="btn btn-secondary" aria-current="page" th:text="#{language.pt}"></a>
+		  <a th:href="@{/home?language=eng}" class="btn btn-dark" th:text="#{language.eng}"></a>
+		</div>
+   	</div>
+   	<footer class="layout-footer">		
+		<p class="text-muted text-center"><a class="link-light" href="https://github.com/piedroalex" target="_blank" th:text="#{page.footer}"></a></p>
+	</footer>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+  </body>
+</html>
